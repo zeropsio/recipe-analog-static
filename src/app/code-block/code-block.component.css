@@ -1,0 +1,77 @@
+.codeblock {
+  justify-items: start;
+  align-items: center;
+  position: relative;
+  background-color: #363636;
+}
+
+code {
+  justify-items: start;
+  position: relative;
+}
+
+.copy {
+  position: absolute;
+  cursor: pointer;
+}
+
+.primarybutton {
+  background-color: #0C655E;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: 500;
+  color: #fff;
+  transition: 300ms;
+}
+
+.primarybutton:hover {
+  background-color: #067D74;
+}
+
+.discordbutton {
+  background-color: #067D74;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: 500;
+  color: #fff;
+  transition: 300ms;
+}
+
+.discordbutton:hover {
+  background-color: #009589;
+}
+
+.zeropsbutton {
+  background-color: #009589;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition: 300ms;
+}
+.zeropsbutton:hover {
+  background-color: #067D74;
+}
+
+.steps {
+  max-width: 1000px;
+  max-width: calc(100% - 2rem);
+}
+
+
+/* pre .copy span {
+  position: relative;
+  top: -7px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+pre .copy span.clipboard-feedback {
+  opacity: 1;
+} */

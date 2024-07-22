@@ -1,0 +1,13 @@
+zerops:
+  - setup: static
+    build:
+      base: nodejs@20
+      buildCommands:
+        - pnpm i
+        - pnpm build
+      deployFiles:
+        - public
+        - node_modules
+        - dist/analog/public/~
+    run:
+      base: static
