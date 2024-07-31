@@ -48,7 +48,7 @@ services:
 
     const zerops = `
 zerops:
-  - setup: static
+  - setup: app
     build:
       base: nodejs@20
       buildCommands:
