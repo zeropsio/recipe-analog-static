@@ -11,3 +11,4 @@ zerops:
         - dist/analog/public/~
     run:
       base: static
+
