@@ -7,7 +7,6 @@ zerops:
         - pnpm build
       deployFiles:
         - public
-        - node_modules
         - dist/analog/public/~
     run:
       base: static
