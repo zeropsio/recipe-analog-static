@@ -9,14 +9,14 @@ import { CodeBlockComponent } from '../code-block/code-block.component';
       <div class="mx-auto">
         <div class="header text-center mx-auto">
           <span
-            class="bg-[#363636] border border-[#5d5d5d] px-4 py-2 text-sm rounded-md"
+            class="bg-[#18212F] border border-[#30384A]  text-[#DCDCDC]  px-4 py-2 text-sm rounded-md"
           >
             Developer-First Platform as a Service
           </span>
           <div class="mt-8">
             <h1>
               Deploy your Analog App
-              <span class="text-gradient block">with Zerops</span>
+              <a href="https://zerops.io/" target="_blank" class="text-gradient block">with Zerops</a>
             </h1>
             <p class="mx-auto font-semibold text-2xl">
               Analog Static example running on Zerops.
@@ -35,7 +35,7 @@ import { CodeBlockComponent } from '../code-block/code-block.component';
               class="text-lg"
             >
               <span
-                class="deploybutton rounded-full flex flex-row items-center justify-center space-x-4 hover:-translate-y-1 duration-300"
+                class="deploybutton mt-6 rounded-full flex flex-row items-center justify-center space-x-4 hover:-translate-y-1 duration-300"
               >
                 <span>Deploy on Zerops</span>
                 <svg
@@ -71,36 +71,11 @@ import { CodeBlockComponent } from '../code-block/code-block.component';
           <a href="https://zerops.io" class="link" target="_blank"> Zerops </a>
         </p>
       </div>
-      <!-- <div class="card">
-      <button type="button" (click)="increment()">Count {{ count() }}</button>
-    </div>
-
-    <p class="read-the-docs">
-      For guides on how to customize this project, visit the
-      <a href="https://analogjs.org" target="_blank">Analog documentation</a>
-    </p> -->
     </div>
   `,
   styles: [
     `
-      .logo {
-        will-change: filter;
-      }
-      .logo:hover {
-        filter: drop-shadow(0 0 2em #646cffaa);
-      }
-      .read-the-docs {
-        color: #888;
-      }
-      .header {
-        padding: 1rem;
-        width: 800px;
-        max-width: calc(100% - 2rem);
-        color: #f7e9ff;
-        font-size: 20px;
-        line-height: 1.6;
-        justify-self: center;
-      }
+
       .deploybutton {
         background-color: #00b1a3;
         padding-left: 7.25rem;
@@ -117,12 +92,19 @@ import { CodeBlockComponent } from '../code-block/code-block.component';
       }
 
       .text-gradient {
-        background: linear-gradient(90deg, #e6e6e6 0%, #a8a8a8 100%);
+        background: linear-gradient(90deg, #DCDCDC 0%, #F20042 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent;
       }
+      
+      .text-gradient:hover {
+        background: linear-gradient(90deg, #FF87A8 0%, #F20042 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
     `,
   ],
 })
