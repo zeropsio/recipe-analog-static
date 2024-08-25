@@ -105,6 +105,7 @@ import { CodeBlockComponent } from '../code-block/code-block.component';
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent;
+      }
     `,
   ],
 })
