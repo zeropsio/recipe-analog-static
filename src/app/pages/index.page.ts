@@ -1,5 +1,7 @@
 import { Component, signal } from '@angular/core';
+
 import { CodeBlockComponent } from '../code-block/code-block.component';
+
 @Component({
   selector: 'app-home',
   standalone: true,
