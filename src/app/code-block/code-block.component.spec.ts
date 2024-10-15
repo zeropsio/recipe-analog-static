@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CodeBlockComponent } from './code-block.component';
 
@@ -6,11 +6,11 @@ describe('CodeBlockComponent', () => {
   let component: CodeBlockComponent;
   let fixture: ComponentFixture<CodeBlockComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(async() => {
     TestBed.configureTestingModule({
-      declarations: [CodeBlockComponent],
+      imports: [CodeBlockComponent],
     }).compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CodeBlockComponent);
