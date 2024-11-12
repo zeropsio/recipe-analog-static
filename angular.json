@@ -3,55 +3,99 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-app": {
+    "recipe-angular-static": {
       "projectType": "application",
-      "root": ".",
+      "schematics": {},
+      "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@analogjs/platform:vite",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "configFile": "vite.config.ts",
-            "main": "src/main.ts",
-            "outputPath": "dist/client",
-            "tsConfig": "tsconfig.app.json"
-          },
-          "defaultConfiguration": "production",
-          "configurations": {
-            "development": {
-              "mode": "development"
-            },
-            "production": {
-              "sourcemap": false,
-              "mode": "production"
+            "outputPath": "dist/recipe-angular-static",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
             }
-          }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@analogjs/platform:vite-dev-server",
-          "defaultConfiguration": "development",
-          "options": {
-            "buildTarget": "my-app:build",
-            "port": 5173
-          },
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "development": {
-              "buildTarget": "my-app:build:development",
-              "hmr": true
-            },
             "production": {
-              "buildTarget": "my-app:build:production"
+              "buildTarget": "recipe-angular-static:build:production"
+            },
+            "development": {
+              "buildTarget": "recipe-angular-static:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "test": {
-          "builder": "@analogjs/vitest-angular:test"
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "0025df83-878e-4379-b60e-5accf0f14e53"
   }
 }

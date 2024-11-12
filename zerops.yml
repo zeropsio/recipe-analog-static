@@ -4,9 +4,13 @@ zerops:
       base: nodejs@20
       buildCommands:
         - pnpm i
-        - pnpm build
+        - pnpm run build
       deployFiles:
-        - dist/analog/public/~
+        - dist/recipe-angular-static/browser/~
     run:
       base: static
+      routing:
+        redirects:
+          - from: /*
+            to: /index.html
 
