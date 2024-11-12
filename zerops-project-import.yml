@@ -1,5 +1,5 @@
 project:
-  name: recipe-angular
+  name: recipe-analog
   tags:
     - zerops-recipe
 
@@ -7,4 +7,4 @@ services:
   - hostname: app
     type: static
     enableSubdomainAccess: true
-    buildFromGit: https://github.com/zeropsio/recipe-angular-static
+    buildFromGit: https://github.com/zeropsio/recipe-analog-static

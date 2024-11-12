@@ -17,11 +17,11 @@ import { CodeBlockComponent } from '../code-block/code-block.component';
           </span>
           <div class="mt-8">
             <h1>
-              Deploy your Angular App
+              Deploy your Analog App
               <a href="https://zerops.io/" target="_blank" class="text-gradient block">with Zerops</a>
             </h1>
             <p class="mx-auto font-semibold text-2xl">
-              Angular Static example running on Zerops.
+              Analog Static example running on Zerops.
               <span class="block"
                 >Deploy and test yourself with a single click.</span
               >
@@ -32,7 +32,7 @@ import { CodeBlockComponent } from '../code-block/code-block.component';
         <div class="mt-6">
           <div class="flex justify-center">
             <a
-              href="https://app.zerops.io/recipe/angular-static"
+              href="https://app.zerops.io/recipe/analog-static"
               target="_blank"
               class="text-lg"
             >
@@ -111,4 +111,10 @@ import { CodeBlockComponent } from '../code-block/code-block.component';
     `,
   ],
 })
-export default class HomeComponent {}
+export default class HomeComponent {
+  count = signal(0);
+
+  increment() {
+    this.count.update((count) => count + 1);
+  }
+}
