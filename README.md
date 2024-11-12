@@ -1,6 +1,9 @@
 # Zerops x Angular - Static
 
 [Zerops](https://zerops.io) makes deploying and running Angular apps, both server side rendered and static, a breeze. This recipe showcases the Static version.
+
+<br/>
+
 ![analog](https://github.com/zeropsio/recipe-shared-assets/blob/main/covers/svg/cover-analog.svg)
 
 <br/>
